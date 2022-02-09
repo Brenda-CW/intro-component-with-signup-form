@@ -143,6 +143,10 @@
         width: 90%;
      }
 
+     .hide {
+       display: none;
+     }
+     
      .form--submit--btn {
          background-color: hsl(154, 59%, 51%);
          color: #fff;
