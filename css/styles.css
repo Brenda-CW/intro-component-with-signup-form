@@ -135,12 +135,20 @@
         padding: 30px;
      }
 
+     .form--style {
+       display: flex;
+       flex-flow: column nowrap;
+       justify-content: center;
+       align-content: center;
+       margin: 0 auto;
+       width: 90%;
+     }
+
      .form--inputs {
         padding: 10px;
         border-radius: 5px;
-        margin-bottom: 12px;
+        margin-bottom: 10px; 
         font-size: .75em;
-        width: 90%;
      }
 
      .hide {
@@ -152,6 +160,22 @@
          color: #fff;
          text-transform: uppercase;
          cursor: pointer;
+     }
+
+     .first-name-alert, 
+     .last-name-alert,
+     .password-alert {
+       color:hsl(0, 100%, 74%);
+       text-align: right;
+       font-style: italic;
+       font-size: .75em;
+       margin-bottom: 20px;
+     }
+
+     .error-icon {
+      height: 24px;
+      width: 24px;
+      align-content: right;
      }
 
      .terms {

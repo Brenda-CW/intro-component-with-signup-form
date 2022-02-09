@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <script src="./js/script.js" defer></script>
   </head>
 
   <body>
@@ -31,11 +33,11 @@
         </div>
           
         <div class="form">
-          <form>
+          <form class="form--style">
             <input type="text" name="First Name" placeholder="First Name" class="form--inputs" id="first-name"> 
             <div id=first-name-error class="first-name-alert hide">First Name cannot be empty</div>
 
-            <input type="text" name="Last Name" placeholder="Last Name" class="form--inputs" id="lastName"> 
+            <input type="text" name="Last Name" placeholder="Last Name" class="form--inputs" id="last-name"> 
             <div id=last-name-error class="last-name-alert hide">Last Name cannot be empty</div>
 
             <input type="email" name="Email" placeholder="email@example/com" class="form--inputs" id="email"> 
@@ -44,7 +46,7 @@
             <input type="password" name="Password" placeholder="Enter your password" class="form--inputs" id="password"> 
             <div id=password-error class="password-alert hide">Password cannot be empty</div>
 
-            <input type="submit" value="Claim your free trial" class="form--inputs form--submit--btn" id="btn"/> 
+            <button type="submit" class="form--inputs form--submit--btn" id="btn">Claim your free trial</button> 
 
             <p class="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
           </form>

@@ -1,30 +1,36 @@
-import"./styles.css";
-
 const btn = document.getElementById("btn");
 const firstName = document.getElementById("first-name");
-const firstError = document.getElementById("first-name-error");
+const firstError = document.querySelector(".first-name-alert");
 const lastName = document.getElementById("last-name");
-const lastError = document.getElementById("last-name-error");
-const email = document.getElementById("email");
+const lastError = document.querySelector(".last-name-alert");
+const emailAddress = document.getElementById("email");
 const emailError = document.getElementById("email-error");
 const password = document.getElementById("password");
-const passwordError = document.getElementById("password-error");
+const passwordError = document.querySelector(".password-alert");
 
 const submit = () => {
     const first = firstName.value;
     const last = lastName.value;
-    console.log(first)
-    console.log(last)
+    const pass = password.value;
+    const email = emailAddress.value;
+    console.log({first});
+    console.log({last});
+    console.log({pass})
+    console.log({email})
     if (first === "") {
-        firstName.innerHTML = "<img>'./images/icon-error.svg'</img>"
-        firstError.classList.remove(".hide") 
+        first.innerHTML = "Hey<img src='./images/icon-error.svg' class='error-icon'>"
+        firstError.classList.remove("hide") 
         console.log("First Name Error!")
-    } else if (last === "") {
-        lastError.classList.remove(".hide") 
+    } if (last === "") {
+        lastError.classList.remove("hide") 
         console.log("Last Name Error!")
-    }
+    } if (pass === "") {
+        console.log("Password Error!")
+        passwordError.classList.remove("hide") 
+    } 
 }
 
-btn.addEventListener("click", function() {
+btn.addEventListener("click", function(event) {
+    event.preventDefault()
     submit();
 });
