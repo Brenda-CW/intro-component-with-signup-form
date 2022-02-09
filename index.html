@@ -8,11 +8,6 @@
     
     <title>Frontend Mentor | Intro component with sign up form</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-  
-    </style>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap" rel="stylesheet"> 
@@ -37,11 +32,15 @@
           
         <div class="form">
           <form>
-            <input type="text" name="First Name" placeholder="First Name" class="form--inputs"> 
-            <input type="text" name="Last Name" placeholder="Last Name" class="form--inputs"> 
-            <input type="email" name="Email" placeholder="Email Address" class="form--inputs"> 
-            <input type="password" name="Password" placeholder="Enter your password" class="form--inputs"> 
-            <input type="submit" value="Claim your free trial" class="form--inputs form--submit"/> 
+            <input type="text" name="First Name" placeholder="First Name" class="form--inputs" id="firstName"> 
+            <div id=firstNameError></div>
+            <input type="text" name="Last Name" placeholder="Last Name" class="form--inputs" id="lastName"> 
+            <div id=lastNameError></div>
+            <input type="email" name="Email" placeholder="Email Address" class="form--inputs" id="email"> 
+            <div id=emailError></div>
+            <input type="password" name="Password" placeholder="Enter your password" class="form--inputs" id="password"> 
+            <div id=passwordError></div>
+            <input type="submit" value="Claim your free trial" class="form--inputs form--submit--btn" id="btn"/> 
             <p class="terms">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
           </form>
         </div>
@@ -49,10 +48,10 @@
         <footer>
           <p class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="#">Brenda Whetstone</a>.
+            Coded by <a href="https://devbybrenda.com">Brenda Whetstone</a>.
           </p>
         </footer>
-        
+
       </div>
     </div>
   </body>

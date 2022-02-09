@@ -143,10 +143,11 @@
         width: 90%;
      }
 
-     .form--submit {
+     .form--submit--btn {
          background-color: hsl(154, 59%, 51%);
          color: #fff;
          text-transform: uppercase;
+         cursor: pointer;
      }
 
      .terms {
@@ -198,24 +199,17 @@
        =============================================================================*/
        @media only screen and (min-width: 1440px) {
 
-        body {
-            /* background-image: url("./images/bg-intro-desktop.png");
-            background-color: none;  */
-        }
-
         h2 {
           font-size: 3em;
         }
         .container {
             width: 75%;
-            /* background-color: hsl(0, 100%, 74%);  */
             display: flex;
             justify-content: center;
             align-content: flex-start;
             flex-flow: row nowrap;
             padding: 200px 0px 0px;
             text-align: left;
-            /* margin: 0 auto; */
         }
 
         .intro--section {
@@ -232,11 +226,6 @@
           width: 65%;
           text-align: center;
         }
-
-
-
-
-
 
     } /* CLOSE TO DESKTOP STYLES
 
