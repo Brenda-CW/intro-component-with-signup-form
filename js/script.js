@@ -7,30 +7,42 @@ const emailAddress = document.getElementById("email");
 const emailError = document.getElementById("email-error");
 const password = document.getElementById("password");
 const passwordError = document.querySelector(".password-alert");
+const email = emailAddress.value;
 
-const submit = () => {
+const validate = () => {
     const first = firstName.value;
     const last = lastName.value;
     const pass = password.value;
     const email = emailAddress.value;
-    console.log({first});
-    console.log({last});
-    console.log({pass})
-    console.log({email})
+
     if (first === "") {
-        first.innerHTML = "Hey<img src='./images/icon-error.svg' class='error-icon'>"
-        firstError.classList.remove("hide") 
-        console.log("First Name Error!")
+        firstName.classList.add("invalid");
+        firstError.classList.remove("hide") ;
     } if (last === "") {
+        lastName.classList.add("invalid");
         lastError.classList.remove("hide") 
-        console.log("Last Name Error!")
     } if (pass === "") {
-        console.log("Password Error!")
-        passwordError.classList.remove("hide") 
+        password.classList.add("invalid");
+        passwordError.classList.remove("hide") ;
     } 
+    // if (!email.includes("@") || !email.includes(".com")) {
+    //     emailAddress.classList.add("invalid");
+    //     emailError.classList.remove("hide");
+    // } REMOVED BECAUSE THIS WOULD NOT HAVE ACCEPTED .NET, .ORG AND OTHER DOMAINS
 }
+
+const emailValidate= () => {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(!email.match(mailformat)) {
+        emailAddress.classList.add("invalid");
+        emailError.classList.remove("hide");
+        console.log("Email error")
+    }
+}
+
 
 btn.addEventListener("click", function(event) {
     event.preventDefault()
-    submit();
+    validate();
+    emailValidate();
 });
